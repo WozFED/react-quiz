@@ -1,0 +1,178 @@
+.first {
+  margin-top:$space-x-standard;
+}
+.end {
+  margin-top: 0;
+}
+
+.question {
+  font-size: pxToRem(30);
+}
+.border {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left:$space-x-small;
+  width: 70%;
+  height: 70%;
+  border-bottom: 1px solid #f849b3;
+  padding-bottom:$space-x-small;
+  margin-bottom:$space-xsx-small;
+  padding-top:$space-x-small;
+
+}
+
+.arrow {
+  &.coding {
+  background: url('../../../../assets/coding_arrow.png');
+  background-size: 100% 100%;
+  @extend %arrowHolder;
+}
+&.moto {
+  background: url('../../../../assets/moto_arrow.png');
+  background-size: 100% 100%;
+  @extend %arrowHolder;
+}
+&.culture {
+  background: url('../../../../assets/culture_arrow.png');
+  background-size: 100% 100%;
+  @extend %arrowHolder;
+}
+&.tech {
+  background: url('../../../../assets/tech_arrow.png');
+  background-size: 100% 100%;
+  @extend %arrowHolder;
+}
+&.history {
+  background: url('../../../../assets/history_arrow.png');
+  background-size: 100% 100%;
+  @extend %arrowHolder;
+}
+}
+.score {
+  display: flex;
+  justify-content: center;
+  width: $low-size;
+  height: $low-size;
+  font-size: pxToRem(25);
+  font-family: "Ubuntu Condensed", sans-serif;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.score.moto {
+  background: url("../../../../assets/moto_score.png") no-repeat;
+  background-size: 100% 100%;
+}
+.score.tech {
+  background: url("../../../../assets/tech_score.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.score.history {
+  background: url("../../../../assets/history_score.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.score.coding {
+  background: url("../../../../assets/coding_score.png") no-repeat;
+  background-size: 100% 100%;
+}
+.score.culture {
+  background: url("../../../../assets/culture_score.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.shadow {
+  width: 80%;
+  height:$button-xx-small;
+  font-size: pxToRem(25);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  p {
+    text-decoration: none;
+  }
+  &-responsive {
+    width: 100%;
+    margin: $space-x-standard;
+    height:$button-xx-small;
+    font-size: pxToRem(25);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    p {
+      text-decoration: none;
+    }
+  }
+
+  &-home {
+    width: 100%;
+    margin: 0;
+    height:$button-xx-small;
+    font-size: pxToRem(25);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    &.tech {
+      background: url("../../../../assets/podcien.png");
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.shadow-end {
+  width: 400px;
+  margin:$space-x-standard;
+  height: 30%;
+  font-size: 1.5625rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: -167px;
+  p {
+    font-size: pxToRem(24);
+    text-decoration: none;
+  }
+}
+
+.big {
+  position: absolute;
+  left: $button-x-small;
+  width: $low-s-size;
+  height: $low-s-size;
+  font-size: pxToRem(40);
+}
+
+.shadow.tech,
+.shadow-responsive.tech,
+.shadow-end.tech {
+  background: url("../../../../assets/podcien.png") no-repeat;
+  background-size: 100% 100%;
+}
+.shadow.moto,
+.shadow-responsive.moto,
+.shadow-end.moto {
+  background: url("../../../../assets/podcien_moto.png") no-repeat;
+  background-size: 100% 100%;
+}
+.shadow.coding,
+.shadow-responsive.coding,
+.shadow-end.coding {
+  background: url("../../../../assets/coding_shade.png") no-repeat;
+  background-size: 100% 100%;
+}
+.shadow.history,
+.shadow-responsive.history,
+.shadow-end.history {
+  background: url("../../../../assets/podcien_his.png") no-repeat;
+  background-size: 100% 100%;
+}
+.shadow.culture,
+.shadow-responsive.culture,
+.shadow-end.culture {
+  background: url("../../../../assets/podcien_kultura.png") no-repeat;
+  background-size: 100% 100%;
+}

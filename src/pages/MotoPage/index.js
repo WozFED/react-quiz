@@ -1,0 +1,31 @@
+import React from "react";
+import motoryzacja from "../../assets/motoryzacja_ikona.png";
+import ChosenCategory from "../../components/ChoosenCategory";
+import HeaderNavi from "../../components/HeaderNavi";
+import Navigation from "../../components/Navigation";
+
+const MotoPage = (props) => {
+  return (
+    <div className="about moto">
+      <div className="about__wrapper">
+        <div className="introduction">
+          <ChosenCategory
+            title={"motoryzacja"}
+            classProp={"moto"}
+            image={motoryzacja}
+          />
+        </div>
+        <div className="navigation">
+          <HeaderNavi />
+          <Navigation
+            classProp={"moto"}
+            naviTitle={"WYBIERZ KATEGORIĘ"}
+            isMe={"MOTORYZACJA"}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MotoPage;

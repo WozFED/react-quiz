@@ -1,0 +1,49 @@
+.answer {
+  height: $space-xs-large;
+  p {
+    text-decoration: none;
+  }
+  &-input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      font-size: pxToRem(20);
+    }
+  }
+}
+
+.input-box {
+  width: $high-s-size;
+  height: $space-x-large;
+  border: none;
+  border-radius: $space-x-small;
+  outline: none;
+  font-size: pxToRem(25);
+  text-align: center;
+  margin-bottom: $space-x-large;
+  &.correct {
+    background-color: $c-japaneseLaurel;
+  }
+  &.incorrect {
+    background-color: $c-red;
+  }
+}
+
+.drag {
+  display: flex;
+  justify-content: center;
+  &__element {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-size: pxToRem(20);
+  }
+}

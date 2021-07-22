@@ -1,0 +1,221 @@
+.button {
+  &-start {
+    @include buttonparam(left,$button-medium, $button-xx-small, 0 auto);
+    margin-top: $space-x-standard;
+    transition: ease-in-out 0.25s;
+    display: flex;
+    justify-content: space-evenly;
+    &.end {
+      margin-top: 0;
+    }
+    p {
+      color: #fff;
+      margin: 0;
+      text-decoration: none;
+      font-size: pxToRem(30);
+      
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &.tech {
+      @include buttonBackground($c-haiti, $c-plum, $c-plum, $c-haiti, $c-plum );
+      background-size: 300% 300%;
+      &:hover {
+        cursor: pointer;
+        background-position: 100% 0;
+      }
+    }
+   
+    &.moto {
+      @include buttonBackground($c-blueZodiac, $c-denim, $c-blueRibbon, $c-luckyPoint, $c-white );
+     
+      &:hover {
+        cursor: pointer;
+        background-position: 100% 0;
+      }
+    }
+    &.history {
+      @include buttonBackground( $c-codGray, $c-mongoose, $c-indianKhaki, $c-kabul, $c-white );
+      &:hover {
+        cursor: pointer;
+        background-position: 100% 0;
+      }
+    }
+    &.culture {
+      @include buttonBackground($c-doveGray, $c-silver, $c-silver, $c-doveGray, $c-white );
+      &:hover {
+        cursor: pointer;
+        background-position: 100% 0;
+      }
+    }
+    &.coding {
+      @include buttonBackground($c-valhalla, $c-minsk, $c-mrViolet, $c-minsk, $c-minsk);
+      &:hover {
+        background-position: 100% 0;
+        cursor: pointer;
+      }
+    }
+  }
+  &-answer {
+    @include buttonparam(
+      left,
+      $button-small,
+      $button-xx-small,
+      $space-xsx-small
+    );
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 0.5s transform;
+    }
+    &.tech {
+      background: url("../../../../assets/start_button.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/goodbutton.png");
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+    &.moto {
+      background: url("../../../../assets/moto_start_button.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/moto_correct_button.png");
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+    &.culture {
+      background: url("../../../../assets/answer_button_culture.png");
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/answer_culutre_correct.png");
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+    &.history {
+      background: url("../../../../assets/start_button_historia.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/history_correct_button.png")
+          no-repeat;
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+    &.coding {
+      background: url("../../../../assets/coding_button.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/tech_correct_button.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-left: $space-x-small;
+      font-size: pxToRem(20);
+      color: $c-white;
+    }
+  }
+
+  &-drag {
+    @include buttonparam(center, $button-small, $space-xs-large, $space-xsx-small);
+    font-size: pxToRem(20);
+    display: flex;
+    justify-content: center;
+    p {
+      margin: 0 auto;
+    }
+
+    &.moto {
+      background: url("../../../../assets/moto_start_button.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/moto_correct_button.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        background: none;
+        background-color: $c-red;
+        border-radius: $space-x-small;
+      }
+    }
+    &.history {
+      background: url("../../../../assets/start_button_historia.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/history_correct_button.png")
+          no-repeat;
+        background-size: 100% 100%;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+    &.culture {
+      background: url("../../../../assets/answer_button_culture.png") no-repeat;
+      background-size: 100% 100%;
+      &.correct {
+        background: url("../../../../assets/answer_culutre_correct.png")
+          no-repeat;
+      }
+      &.incorrect {
+        @extend %incorrectButton;
+      }
+    }
+  }
+}
+
+
+
+.check {
+  margin-left: $low-size;
+  width: $button-x-small;
+  height: $space-x-large;
+  border: none;
+  background-color: transparent;
+  color: $c-white;
+  font-size: pxToRem(20);
+  font-family: "Ubuntu Condensed", sans-serif;
+  transition: 1s all;
+  &.moto {
+    background: url("../../../../assets/moto_start_button.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  &.history {
+    background: url("../../../../assets/start_button_historia.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  &.culture {
+    background: url("../../../../assets/answer_button_culture.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+.input {
+  text-align: center;
+  p {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,187 @@
+.navigation {
+  width: 15%;
+  height: 640px;
+  resize: none;
+
+  &__wrapper {
+    width: 100%;
+  }
+  &__header {
+    width: 100%;
+  }
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    img {
+      width: 20px;
+      margin-right: $space-x-small;
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__categories {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    div {
+      &.history-navi {
+        @include navigationBackground(
+          45deg,
+          $button-x-small,
+          $button-x-small,
+          $c-codGray,
+          $c-mongoose,
+          $c-indianKhaki,
+          $c-kabul,
+          $c-white
+        );
+        background-size: 300% 300%;
+        background-position: 0 100%;
+        &:hover {
+          background-position: 100% 0;
+          cursor: pointer;
+        }
+      }
+      &.tech-navi {
+        @include navigationBackground(
+          45deg,
+          $button-x-small,
+          $button-x-small,
+          $c-haiti,
+          $c-plum,
+          $c-plum,
+          $c-haiti,
+          $c-plum
+        );
+        background-size: 300% 300%;
+        background-position: 0 100%;
+        &:hover {
+          background-position: 100% 0;
+          cursor: pointer;
+        }
+      }
+      &.culture-navi {
+        @include navigationBackground(
+          90deg,
+          $button-x-small,
+          $button-x-small,
+          $c-doveGray,
+          $c-silver,
+          $c-silver,
+          $c-doveGray,
+          $c-white
+        );
+        background-size: 300% 300%;
+        background-position: 0 100%;
+        &:hover {
+          background-position: 100% 0;
+          cursor: pointer;
+        }
+      }
+      &.moto-navi {
+        @include navigationBackground(
+          45deg,
+          $button-x-small,
+          $button-x-small,
+          $c-blueZodiac,
+          $c-denim,
+          $c-blueRibbon,
+          $c-luckyPoint,
+          $c-white
+        );
+        background-size: 500% 500%;
+        background-position: 0 100%;
+        &:hover {
+          background-position: 50% 0;
+          cursor: pointer;
+        }
+      }
+
+      &.coding-navi {
+        @include navigationBackground(
+          45deg,
+          $button-x-small,
+          $button-x-small,
+          $c-valhalla,
+          $c-minsk,
+          $c-mrViolet,
+          $c-minsk,
+          $c-minsk
+        );
+        background-size: 300% 300%;
+        background-position: 0 100%;
+        &:hover {
+          background-position: 50% 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-left: $space-x-small;
+      font-size: 16px;
+    }
+
+    img {
+      width: $space-x-large;
+      height: $space-x-large;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+      width: $low-xs-size;
+      li {
+        margin: $space-x-standard 0;
+        width: $low-xs-size;
+        height: $low-xs-size;
+      }
+    }
+  }
+}
+
+.home-navi {
+  background-image: linear-gradient(
+    45deg,
+    $c-valhalla,
+    $c-minsk,
+    #b2368c,
+    #512e7a
+  );
+  background-size: 300% 300%;
+  background-position: 0 100%;
+  border-radius: $space-x-small;
+  border: 2px solid #7355aa;
+  width: 160px;
+  height: 160px;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  transition: 1s;
+
+  p {
+    margin: 0;
+    margin-left: $space-x-small;
+    font-size: pxToRem(16);
+  }
+  img {
+    margin-left: $space-x-small;
+    margin-top:$space-x-standard;
+    margin-bottom: $space-xsx-small;
+    width: 50%;
+  }
+  &:hover {
+    background-position: 100% 0;
+  }
+}

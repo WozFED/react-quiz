@@ -1,0 +1,58 @@
+@function pxToRem($pxsize, $rembase: 16) {
+  @return ($pxsize/$rembase) + rem;
+}
+
+
+%pageparam {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  resize: none;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%;
+}
+
+@mixin navigationBackground($deg, $width, $height, $color1, $color2, $color3, $color4, $borderColor) {
+background-image: linear-gradient($deg, $color1, $color2,$color3, $color4);
+  border-radius:$space-x-small;
+  border: 2px solid $borderColor;
+  width: $button-x-small;
+  height: $button-x-small;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  transition: 1s;
+}
+
+@mixin buttonBackground ($color1, $color2, $color3, $color4, $borderColor){
+  background: linear-gradient(90deg, $color1,$color2, $color3, $color4);
+  border-radius:$space-x-small;
+  background-size: 300% 300%;
+  background-position: 0 100%;
+  border: 2px solid $borderColor; 
+}
+
+@mixin buttonparam($text-align, $width, $height, $margin){
+    align-items: center;
+    text-align: $text-align;
+    border: none;
+    width: $width;
+    height: $height;
+    transition: 1s all;
+    margin: $margin;
+}
+%incorrectButton {
+  background: none;
+  background-color: red;
+  border-radius:$space-x-small;
+}
+
+%arrowHolder {
+  background-size: 100% 100%;
+  width: $space-xsx-large;
+  height: $space-xsx-large;
+}
