@@ -2,7 +2,6 @@ import React from "react";
 import motoryzacja from "../../assets/motoryzacja_ikona.png";
 import ChosenCategory from "../../components/ChoosenCategory";
 import HeaderNavi from "../../components/HeaderNavi";
-import Navigation from "../../components/Navigation";
 
 const MotoPage = (props) => {
   return (

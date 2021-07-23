@@ -2,7 +2,6 @@ import React from "react";
 import kultura from "../../assets/kultura_ikona.png";
 import ChosenCategory from "../../components/ChoosenCategory";
 import HeaderNavi from "../../components/HeaderNavi";
-import Navigation from "../../components/Navigation";
 
 const CulturePage = (props) => {
   return (
