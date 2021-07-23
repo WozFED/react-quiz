@@ -17,11 +17,7 @@ const MotoPage = (props) => {
         </div>
         <div className="navigation">
           <HeaderNavi />
-          <Navigation
-            classProp={"moto"}
-            naviTitle={"WYBIERZ KATEGORIĘ"}
-            isMe={"MOTORYZACJA"}
-          />
+          
         </div>
       </div>
     </div>

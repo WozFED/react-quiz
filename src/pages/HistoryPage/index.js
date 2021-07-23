@@ -16,11 +16,7 @@ const HistoryPage = (props) => {
         </div>
         <div className="navigation">
           <HeaderNavi />
-          <Navigation
-            classProp={"history"}
-            naviTitle={"WYBIERZ KATEGORIĘ"}
-            isMe={"HISTORIA"}
-          />
+          
         </div>
       </div>
     </div>

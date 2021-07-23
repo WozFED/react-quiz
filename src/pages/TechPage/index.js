@@ -17,11 +17,7 @@ const TechPage = (props) => {
         </div>
         <div className="navigation">
           <HeaderNavi />
-          <Navigation
-            classProp={"tech"}
-            naviTitle={"WYBIERZ KATEGORIĘ"}
-            isMe={"TECHNOLOGIA"}
-          />
+          
         </div>
       </div>
     </div>

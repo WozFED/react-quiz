@@ -6,6 +6,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import SlowSuspense from './components/SlowSuspense';
+import Spinner from './components/Loader';
 import MotoPage from "./pages/MotoPage";
 import HistoryPage from "./pages/HistoryPage";
 import CodingPage from "./pages/CodingPage";
@@ -26,11 +28,32 @@ function App() {
         <Switch>
           <Route exact path="/" render={(props) => <Homepage />} />
           <Route path="/home" render={(props) => <Homepage />} />
-          <Route exact path="/tech" component={TechPage} />
-          <Route exact path="/moto" component={MotoPage} />
-          <Route exact path="/history" component={HistoryPage} />
-          <Route exact path="/coding" component={CodingPage} />
-          <Route exact path="/culture" component={CulturePage} />
+          <Route exact path="/tech" >
+            <SlowSuspense fallback = {<Spinner classProp = {'tech'}/>}>
+              <TechPage />
+            </SlowSuspense>
+          </Route>
+          <Route exact path="/moto">
+          <SlowSuspense fallback = {<Spinner classProp = {'moto'}/>}>
+              <MotoPage />
+            </SlowSuspense>
+          </Route>
+          
+          <Route exact path="/history">
+          <SlowSuspense fallback = {<Spinner classProp = {'history'}/>}>
+              <HistoryPage />
+            </SlowSuspense>
+          </Route>
+          <Route exact path="/coding" >
+          <SlowSuspense fallback = {<Spinner classProp = {'coding'}/>}>
+              <CodingPage />
+            </SlowSuspense>
+          </Route>
+          <Route exact path="/culture"  >
+          <SlowSuspense fallback = {<Spinner classProp = {'culture'}/>}>
+              <CulturePage />
+            </SlowSuspense>
+          </Route>
         </Switch>
         <Switch>
           <Route
