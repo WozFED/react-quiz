@@ -106,7 +106,10 @@
     &-drag {
       align-items: center;
       justify-content: center;
-      font-size: pxToRem(20);
+      
+      p{
+        font-size: pxToRem(20);
+      }
     }
   }
   .input-box {
