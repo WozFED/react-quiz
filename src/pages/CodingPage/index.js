@@ -17,11 +17,7 @@ const CodingPage = (props) => {
         </div>
         <div className="navigation">
           <HeaderNavi />
-          <Navigation
-            classProp={"coding"}
-            naviTitle={"WYBIERZ KATEGORIĘ"}
-            isMe={"PROGRAMOWANIE"}
-          />
+          
         </div>
       </div>
     </div>

@@ -78,6 +78,7 @@
     flex-direction: column;
     img {
       width: $low-size;
+      margin-top: $space-x-standard
     }
     h1 {
       font-size: pxToRem(70);
@@ -100,7 +101,7 @@
   &__score {
     width: 414px;
     margin-bottom: 25px;
-    height: 200px;
+    height: 160px;
     display: flex;
     align-items: center;
     position: relative;

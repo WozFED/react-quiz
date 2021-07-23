@@ -17,11 +17,7 @@ const CulturePage = (props) => {
         </div>
         <div className="navigation">
           <HeaderNavi />
-          <Navigation
-            classProp={"culture"}
-            naviTitle={"WYBIERZ KATEGORIĘ"}
-            isMe={"KULTURA"}
-          />
+          
         </div>
       </div>
     </div>
