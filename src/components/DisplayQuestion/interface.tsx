@@ -17,4 +17,9 @@ export interface Display {
   score: number;
   classTest: string;
   handleInput: any;
+  
+  dragDisable: boolean;
+  handleDrag: any;
+  choice: string;
+  
 }
