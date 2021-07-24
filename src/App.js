@@ -26,8 +26,8 @@ function App() {
     <div className="main__wrapper">
       <Router>
         <Switch>
-          <Route exact path="/" render={(props) => <Homepage />} />
-          <Route path="/home" render={(props) => <Homepage />} />
+          <Route exact path="/" render={() => <Homepage />} />
+          <Route path="/home" render={() => <Homepage />} />
           <Route exact path="/tech" >
             <SlowSuspense fallback = {<Spinner classProp = {'tech'}/>}>
               <TechPage />
@@ -58,32 +58,32 @@ function App() {
         <Switch>
           <Route
             path="/history/one"
-            render={(props) => (
+            render={() => 
               <ShowTheQuests
                 classProp={"history"}
                 question={quests.history}
                 isMe={"HISTORIA"}
                 image={historia}
                 title={'historia'}
-                {...props}
               />
-            )}
+            }
           />
           <Route
             path="/moto/one"
-            render={(props) => (
+            render={() => 
               <ShowTheQuests
                 question={quests.moto}
                 classProp="moto"
                 isMe={"MOTORYZACJA"}
                 image={motoryzacja}
                 title={'motoryzacja'}
+                
               />
-            )}
+            }
           />
           <Route
             path="/tech/one"
-            render={(props) => (
+            render={() => 
               <ShowTheQuests
                 classProp="tech"
                 question={quests.technology}
@@ -91,11 +91,11 @@ function App() {
                 image={technologia}
                 title={'technologia'}
               />
-            )}
+            }
           />
           <Route
             path="/coding/one"
-            render={(props) => (
+            render={() => 
               <ShowTheQuests
                 classProp="coding"
                 question={quests.coding}
@@ -103,11 +103,11 @@ function App() {
                 image={programowanie}
                 title={'programowanie'}
               />
-            )}
+            }
           />
           <Route
             path="/culture/one"
-            render={(props) => (
+            render={() => 
               <ShowTheQuests
                 classProp= "culture"
                 question={quests.culture}
@@ -115,7 +115,7 @@ function App() {
                 image={kultura}
                 title={'kultura'}
               />
-            )}
+            }
           />
         </Switch>
       </Router>

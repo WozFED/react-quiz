@@ -1,7 +1,8 @@
 import Navigation from "../Navigation";
 import HeaderNavi from "../HeaderNavi";
+import { QuizIsEndedProps } from "./interface";
 
-const QuizIsEnded = (props) => {
+const QuizIsEnded = (props: QuizIsEndedProps) => {
   return (
     <div className="about__wrapper">
       <div className="introduction">

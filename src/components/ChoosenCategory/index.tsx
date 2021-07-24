@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
+import { Chosen } from "./interface";
 
-const ChosenCategory = (props) => {
-
-
+const ChosenCategory = (props: Chosen) => {
   return (
     <div className={`introduction__wrapper`}>
       <h1>Quiz</h1>
@@ -10,13 +9,13 @@ const ChosenCategory = (props) => {
       <div className={`shadow-responsive ${props.classProp}`}>
         <p>WYBRANA KATEGORIA:</p>
       </div>
-      <img className="first" alt='obrazek' src={props.image}></img>
+      <img className="first" alt="obrazek" src={props.image}></img>
       <p className="text-decoration">{props.title}</p>
 
-      <Link to={`/${props.classProp}/one`}style ={{textDecoration: 'none'}}>
+      <Link to={`/${props.classProp}/one`} style={{ textDecoration: "none" }}>
         <button className={`button-start ${props.classProp} first`}>
           <p>Rozpocznij</p>
-          <div className = {`arrow ${props.classProp}`}></div>
+          <div className={`arrow ${props.classProp}`}></div>
         </button>
       </Link>
     </div>

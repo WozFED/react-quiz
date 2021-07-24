@@ -1,4 +1,4 @@
-interface AnswerT {
+export interface AnswerProps {
     answer: Array<string>;
     classProp: string;
     incorrect: Array<string>;

@@ -3,8 +3,11 @@ import Answer from "../Answer";
 import InputAnswer from "../InputAnswer";
 import HeaderNavi from "../HeaderNavi";
 import DragAnswer from "../DragAnswer";
+import { Display } from "./interface";
 
-const DisplayQuestion = (props) => {
+
+const DisplayQuestion = (props: Display) => {
+  
   return props.end ? (
     <div className={`about__wrapper`}>
       <div className="introduction">
