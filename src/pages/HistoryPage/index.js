@@ -1,9 +1,8 @@
-import React from "react";
 import historia from "../../assets/historia_ikona.png";
 import ChosenCategory from "../../components/ChoosenCategory";
 import HeaderNavi from "../../components/HeaderNavi";
-import Navigation from "../../components/Navigation";
-const HistoryPage = (props) => {
+
+const HistoryPage = () => {
   return (
     <div className="about history">
       <div className="about__wrapper ">

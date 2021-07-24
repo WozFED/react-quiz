@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 import { MenuItems } from "../Menu/MenuItems";
 import ListItem from "../ListItem";
 
-const Navigation = (props) => {
+interface NavigationProps {
+  isMe: string;
+  naviTitle: string;
+  classProp: string;
+}
+
+const Navigation = (props: NavigationProps) => {
   const oneElementOut = (el, index, array) => {
     return el.title !== props.isMe;
   };

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ListItem from "../../components/ListItem";
 import { MenuItems } from "../../components/Menu/MenuItems";
 
-const Homepage = (props) => {
+const Homepage = () => {
   return (
     <div className="homepage">
       <div className="homepage__wrapper">

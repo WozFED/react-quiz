@@ -1,20 +1,21 @@
 import { useState ,useCallback} from "react";
+import { WrapperProps } from "./interface";
 
-const QuestionWrapper = (props) => {
+const QuestionWrapper = (props: WrapperProps) => {
+  const question = props.question;
   const classProp = props.classProp;
   const isMe = props.isMe;
   const image = props.image;
-  const category = props.question;
   const title = props.title;
   const [score, setScore] = useState(0);
   const [index, setIndex] = useState(0);
   const [end, setEnd] = useState(true);
   const newIndex = index + 1;
-  const answer = category[index].answer;
-  const correct = category[index].correct;
-  const incorrect = category[index].incorrect;
+  const answer = question[index].answer;
+  const correct = question[index].correct;
+  const incorrect = question[index].incorrect;
   const [disable, setDisable] = useState(false);
-  const [active, setActive] = useState();
+  const [active, setActive] = useState("");
   const [dragDisable, setDragDisable] = useState(false);
   const [classTest, setClassTest] = useState("");
 
@@ -73,11 +74,11 @@ const QuestionWrapper = (props) => {
       setDisable(true);
     }
     setTimeout(() => {
-      if (newIndex < category.length) setIndex(newIndex);
+      if (newIndex < question.length) setIndex(newIndex);
       setDisable(false);
       setActive("");
 
-      if (newIndex >= category.length) {
+      if (newIndex >= question.length) {
         setEnd(false);
         setIndex(index);
       }
@@ -92,8 +93,8 @@ const QuestionWrapper = (props) => {
 
   const newProps = {
     score,
-    category,
     index,
+    question,
     handleClick,
     end,
     answer,

@@ -1,10 +1,8 @@
-import React from "react";
 import technologia from "../../assets/technologia_ikona_.png";
 import ChosenCategory from "../../components/ChoosenCategory";
 import HeaderNavi from "../../components/HeaderNavi";
-import Navigation from "../../components/Navigation";
 
-const TechPage = (props) => {
+const TechPage = () => {
   return (
     <div className="about tech">
       <div className="about__wrapper">

@@ -1,10 +1,8 @@
-import React from "react";
 import programowanie from "../../assets/programowanie_ikona.png";
 import ChosenCategory from "../../components/ChoosenCategory";
 import HeaderNavi from "../../components/HeaderNavi";
-import Navigation from "../../components/Navigation";
 
-const CodingPage = (props) => {
+const CodingPage = () => {
   return (
     <div className="about coding">
       <div className="about__wrapper">

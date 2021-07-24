@@ -5,7 +5,7 @@ export interface Display {
   active: string;
   correct: string;
   end: boolean;
-  category: Array<any>;
+  question: Array<any>;
   index: number;
   disable: boolean;
   disabled: boolean;

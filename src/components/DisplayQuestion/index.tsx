@@ -20,13 +20,13 @@ const DisplayQuestion = (props: Display) => {
           </div>
 
           <div className="answer">
-            <p className="question">{props.category[props.index].quest}</p>
+            <p className="question">{props.question[props.index].quest}</p>
 
-            {props.category[props.index].type === "closed" ? (
+            {props.question[props.index].type === "closed" ? (
               <Answer {...props} />
-            ) : props.category[props.index].type === "drag" ? (
+            ) : props.question[props.index].type === "drag" ? (
               <DragAnswer {...props} />
-            ) : props.category[props.index].type === "input" ? (
+            ) : props.question[props.index].type === "input" ? (
               <InputAnswer {...props} />
             ) : null}
           </div>
