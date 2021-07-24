@@ -7,7 +7,6 @@ import { Display } from "./interface";
 
 
 const DisplayQuestion = (props: Display) => {
-  
   return props.end ? (
     <div className={`about__wrapper`}>
       <div className="introduction">

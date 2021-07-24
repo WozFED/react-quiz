@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 
+
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
   const [removed] = result.splice(startIndex, 1);
@@ -83,7 +84,7 @@ const DragAnswer = (props) => {
               {...provided.droppableProps}
             >
               <ItemPick
-                correct={props.classTest}
+                classTest={props.classTest}
                 classProp={props.classProp}
                 choices={choices}
                 dragDisable={props.dragDisable}

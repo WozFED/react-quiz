@@ -1,4 +1,16 @@
-const Answer = (props) => {
+
+interface AnswerProps {
+  answer: any;
+  classProp: string;
+  incorrect: Array<string>;
+  active: string;
+  correct: string;
+  handleClick: any;
+  disable: boolean;
+}
+
+const Answer = (props: AnswerProps) => {
+  
   return props.answer.map((el, index) => {
     return (
       <button

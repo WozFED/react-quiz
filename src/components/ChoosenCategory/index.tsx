@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import { Chosen } from "./interface";
 
 const ChosenCategory = (props: Chosen) => {

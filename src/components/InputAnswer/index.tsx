@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { InputProps } from "./interface";
 
-const InputAnswer = (props) => {
+
+const InputAnswer = (props: InputProps) =>  {
   const [inputValue, setInputValue] = useState("");
   const handleChange = (e) => {
     setInputValue(e.target.value);
