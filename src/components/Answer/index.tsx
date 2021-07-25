@@ -1,15 +1,7 @@
+import {AnswerProps} from './interface'
 
-interface AnswerProps {
-  answer: any;
-  classProp: string;
-  incorrect: Array<string>;
-  active: string;
-  correct: string;
-  handleClick: any;
-  disable: boolean;
-}
 
-const Answer = (props: AnswerProps) => {
+const Answer: Function = (props: AnswerProps):JSX.Element[] =>{
   
   return props.answer.map((el, index) => {
     return (
