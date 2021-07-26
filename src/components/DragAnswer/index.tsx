@@ -39,7 +39,8 @@ const Choice = (props: ChoiceProps) => {
   );
 };
 
-const ItemPick = React.memo(function ItemPick<any>({
+
+const ItemPick = React.memo(function ItemPick<choices, classProp, dragDisable, correct>({
   choices,
   classProp,
   dragDisable,
@@ -56,6 +57,9 @@ const ItemPick = React.memo(function ItemPick<any>({
     />
   ));
 });
+
+
+
 interface DragProps {
   answer: any;
   index: number;
