@@ -39,7 +39,7 @@ const Choice = (props: ChoiceProps) => {
   );
 };
 
-const ItemPick = React.memo(function ItemPick<props>({
+const ItemPick = React.memo(function ItemPick<any>({
   choices,
   classProp,
   dragDisable,
