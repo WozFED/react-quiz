@@ -16,6 +16,7 @@ interface ChoiceProps {
   classProp: string;
   correct: string;
   choice: string;
+  classTest: string;
 }
 const Choice = (props: ChoiceProps) => {
   return (
@@ -27,7 +28,7 @@ const Choice = (props: ChoiceProps) => {
       {(provided) => (
         <div
           className={`button-drag ${props.classProp}
-        ${props.correct}`}
+          ${props.classTest}`}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
@@ -40,14 +41,10 @@ const Choice = (props: ChoiceProps) => {
 };
 
 
-const ItemPick = React.memo(function ItemPick<choices, classProp, dragDisable, correct>({
-  choices,
-  classProp,
-  dragDisable,
-  correct
-}) {
+const ItemPick = React.memo(({choices, correct, dragDisable, classProp, classTest}: any) => {
   return choices.map((choice, index) => (
     <Choice
+      classTest = {classTest}
       correct={correct}
       dragDisable={dragDisable}
       classProp={classProp}
@@ -60,6 +57,7 @@ const ItemPick = React.memo(function ItemPick<choices, classProp, dragDisable, c
 
 
 
+
 interface DragProps {
   answer: any;
   index: number;
@@ -68,12 +66,13 @@ interface DragProps {
   handleDrag: any;
   choice: string;
   correct: string;
+  classTest: string;
   
 }
 
 const DragAnswer = (props: DragProps) => {
   const [choices, setChoices] = useState<any>([]);
-  
+  console.log(choices, props.correct, props.classTest)
   useEffect(() => {
     setChoices(props.answer);
   }, [props.index, props.answer]);
@@ -106,9 +105,10 @@ const DragAnswer = (props: DragProps) => {
               {...provided.droppableProps}
             >
               <ItemPick
-              correct = {props.correct}
+              classTest = {props.classTest}
+                correct = {props.correct}
                 classProp={props.classProp}
-                choices={choices}
+                choices=  {choices}
                 dragDisable={props.dragDisable}
               />
               {provided.placeholder}
